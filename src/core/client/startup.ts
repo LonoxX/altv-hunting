@@ -47,7 +47,6 @@ alt.onServer('clientHunting:setAnimalGrazing', async (animalPed: alt.Ped) => {
 
 alt.onServer('clientHunting:setAnimalWandering', async (animalPed: alt.Ped, randomCoords: alt.Vector2, coordsAngle: number) => {
     await alt.Utils.waitFor(() => animalPed.isSpawned);
-    alt.FocusData.overrideFocus(animalPed.pos);
 
     let groundZ = native.getGroundZFor3dCoord(randomCoords.x, randomCoords.y, 100, 0, true, true);
     let numericGroundZ = groundZ[1];
